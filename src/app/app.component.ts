@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RecordsService } from './records.service'
 
 @Component({
   selector: 'app-root',
@@ -10,13 +9,11 @@ import { RecordsService } from './records.service'
 export class AppComponent {
   records = []
 
-  constructor(private myFirstService : RecordsService) {
+  constructor() {
     
   }
 
   ngOnInit() {
-    this.myFirstService.getData().subscribe(data => {
-      this.records = data.obj
-    })
+    
   }
 }

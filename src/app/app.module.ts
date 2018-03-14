@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component'
 import { AuthService } from './auth.service'
 import { UserService } from './user.service'
@@ -17,7 +16,6 @@ import { RegisterComponent } from './register/register.component'
   declarations: [
     AppComponent,
     LoginComponent,
-    AdminComponent,
     HomeComponent,
     LogoutComponent,
     DashboardComponent,
@@ -36,13 +34,9 @@ import { RegisterComponent } from './register/register.component'
         component: LogoutComponent
       },
       {
-        path: 'admin',
-        component: AdminComponent,
-        canActivate: [AuthGuard]
-      },
-      {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'register',

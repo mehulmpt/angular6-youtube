@@ -1,3 +1,8 @@
-<p>
-  dashboard works!
-</p>
+<div id="message">
+    <p>{{quote}} by {{email}} </p>
+    <a routerLink="/logout" class="button">Logout</a>
+    <div id="controls">
+        <input type="text" value="{{quote}}" id="myQuote">
+        <input type="button" value="Update Quote" (click)="updateQuote($event)">
+    </div>
+</div>
